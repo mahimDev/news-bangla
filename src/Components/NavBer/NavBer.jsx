@@ -5,7 +5,7 @@ const NavBer = () => {
     return (
         <div className="">
             {/* social and date */}
-            <div className="flex justify-between items-center py-3 w-10/12 mx-auto">
+            <div className=" flex justify-between items-center py-3 w-10/12 mx-auto">
                 <h1 className="font-medium text-xl">{date}</h1>
                 <div className="flex gap-1">
                     <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="" />
@@ -19,7 +19,7 @@ const NavBer = () => {
                 <h1 className="text-4xl font-bold bg-blue-500 text-center text-white py-5 ">News Bangla</h1>
             </div>
             {/* menu bar */}
-            <div className="flex w-10/12 mx-auto">
+            <div className=" flex w-10/12 mx-auto shadow-2xl mb-10 py-2">
                 {/* khobor */}
                 <div className="w-fit group ">
                     <h1 className="group-hover:bg-gray-300 font-semibold py-1 px-4">Khobor</h1>
