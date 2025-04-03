@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
+
 
 const AddNews = () => {
     const [news, setNews] = useState({
@@ -15,10 +17,27 @@ const AddNews = () => {
         setNews({ ...news, [name]: value });
     };
 
-    const handleImageChange = (e) => {
+    const uploadImgBB = async (file) => {
+        const apiKey = import.meta.env.VITE_IMAGE_API_KEY
+        const apiURL = import.meta.env.VITE_IMAGE_API_URL
+        const formData = new FormData()
+        formData.append("image", file)
+        try {
+            const res = await axios.post(`${apiURL}?key=${apiKey}`, formData)
+            return res.data.data.url
+        } catch (err) {
+            console.error(err)
+            return null
+        }
+    }
+
+    const handleImageChange = async (e) => {
         const file = e.target.files[0];
         if (file) {
-            const imageUrl = URL.createObjectURL(file);
+            // const res = await axios.post(`${apiURL}?key=${apiKey}`, file)
+            // console.log(res)
+            const imageUrl = await uploadImgBB(file);
+
             setPreview(imageUrl);
             setNews({ ...news, imageUrl });
         }
