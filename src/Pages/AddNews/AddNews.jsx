@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 
 const AddNews = () => {
@@ -11,7 +12,7 @@ const AddNews = () => {
         imageUrl: "",
     });
     const [preview, setPreview] = useState(null);
-
+    const axiosSecure = useAxiosSecure()
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNews({ ...news, [name]: value });
@@ -43,10 +44,14 @@ const AddNews = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("News Submitted:", news);
-        // Send data to API or database
+        const { data } = await axiosSecure.post("addNews", news)
+        if (data?.insertedId) {
+            alert("News Added")
+        }
+
     };
     return (
         <div>
