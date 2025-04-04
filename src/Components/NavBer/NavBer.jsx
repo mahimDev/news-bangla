@@ -36,39 +36,27 @@ const NavBer = () => {
                 <h1 className="text-4xl font-bold bg-blue-500 text-center text-white py-8 mb-2 ">News Bangla</h1>
             </div>
             {/* menu bar */}
-            <div className=" flex w-10/12 mx-auto shadow-2xl mb-10 py-2 px-10 ">
-                {/* khobor */}
-                {/* <div className="w-fit group ">
-                    <h1 className="group-hover:bg-gray-300 font-semibold py-1 px-4">Khobor</h1>
-                    <div className=" hidden group-hover:block absolute bg-blue-300 ">
-                        <div>
-                            <button className="hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start">Jatio</button>
-                        </div>
-                        <div>
-                            <button className="hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start">Rajniti</button>
-                        </div>
-                        <div>
-                            <button className="hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start">International</button>
-                        </div>
-                        <div>
-                            <button className="hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start">Saradesh</button>
-                        </div>
-                        <div>
-                            <button className="hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start">Oporadh</button>
-                        </div>
-
-                    </div>
-                </div>  */}
-                {/* sorbosesh */}
-                <div>
-
+            <div className="flex justify-between w-10/12 mx-auto items-center">
+                <div className=" flex    py-4 px-10 ">
                     {navLink}
                 </div>
-
-
+                <div className="flex">
+                    <div className="flex ">
+                        <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=59878&format=png&color=000000" alt="" />
+                        <h1 className="text-lg ml-1">Search</h1>
+                    </div>
+                    <div className="border mx-3 border-gray-500"></div>
+                    <div className="flex ">
+                        <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=43942&format=png&color=000000" alt="" />
+                        <h1 className="text-lg ml-1">Login</h1>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
 
 export default NavBer;
+
+////////////////
+

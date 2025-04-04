@@ -1,17 +1,18 @@
 import { Outlet } from "react-router-dom";
 import NavBer from "../Components/NavBer/NavBer";
+import Footer from "../Components/Footer/Footer";
 
 const MainLayout = () => {
     return (
         <div className="">
-            <nav className="">
+            <nav className="sticky -top-[170px] z-[100] bg-white shadow-lg">
                 <NavBer />
             </nav>
             <main>
                 <Outlet />
             </main>
-            <footer className="bg-blue-200 py-3">
-                footer
+            <footer className="">
+                <Footer />
             </footer>
         </div>
     );

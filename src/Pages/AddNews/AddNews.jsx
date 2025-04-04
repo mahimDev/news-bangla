@@ -54,8 +54,8 @@ const AddNews = () => {
 
     };
     return (
-        <div>
-            <h1 className="text-center font-bold text-4xl">   AddNews</h1>
+        <div className="my-10">
+            <h1 className="text-center font-bold text-4xl">   Upload News</h1>
             <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
                 <h2 className="text-2xl font-bold mb-5">Add News Article</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
