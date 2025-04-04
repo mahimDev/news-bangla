@@ -4,6 +4,7 @@ import International from "../../Components/International/International";
 import NewsCard from "../../Components/NewsCard/NewsCard";
 
 const Home = () => {
+
     return (
         <div className="min-h-[80vh]">
             <div className="my-10">

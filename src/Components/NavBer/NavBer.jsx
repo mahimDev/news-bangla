@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBer = () => {
     const date = new Date().toDateString()
@@ -46,10 +46,12 @@ const NavBer = () => {
                         <h1 className="text-lg ml-1">Search</h1>
                     </div>
                     <div className="border mx-3 border-gray-500"></div>
-                    <div className="flex ">
-                        <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=43942&format=png&color=000000" alt="" />
-                        <h1 className="text-lg ml-1">Login</h1>
-                    </div>
+                    <Link to={"register"}>
+                        <div className="flex ">
+                            <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=43942&format=png&color=000000" alt="" />
+                            <h1 className="text-lg ml-1">Login</h1>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
