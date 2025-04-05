@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className="min-h-[80vh]">
-            <div className="my-10">
+            <div className="w-10/12 mx-auto my-10">
                 <BreakingNews />
             </div>
             <div className="my-20">

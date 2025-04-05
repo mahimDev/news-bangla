@@ -1,4 +1,4 @@
-
+// latestNews
 const NewsCard = () => {
     return (
         <div>
