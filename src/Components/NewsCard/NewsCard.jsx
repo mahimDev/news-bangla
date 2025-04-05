@@ -1,48 +1,74 @@
+import { useEffect, useState } from "react";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Link } from "react-router-dom";
+
 // latestNews
 const NewsCard = () => {
+    const [latestNews, setLatestNews] = useState({})
+    const [latest2nd3rdNews, setlatest2nd3rdNews] = useState([])
+    const axiosnPublic = useAxiosPublic()
+    // latest first news
+    useEffect(() => {
+        const fatchData = async () => {
+            const { data } = await axiosnPublic.get("/latestNews")
+            setLatestNews(data[0])
+        }
+        fatchData()
+    }, [axiosnPublic])
+    // latest 2nd & 3rd news
+    useEffect(() => {
+        const fatchData = async () => {
+            const { data } = await axiosnPublic.get("/latest2nd3rdNews")
+            setlatest2nd3rdNews(data)
+        }
+        fatchData()
+    }, [axiosnPublic])
     return (
         <div>
-            <div className="flex justify-center gap-20">
-                <div className="w-[800px] ">
-                    <img className="h-[500px] w-full object-cover" src="https://i.ibb.co.com/m9Jkh0v/view-University-of-Oxford-England-Oxfordshire.webp " alt="" />
-                    <h1 className="text-4xl p-3">
-                        স্বস্তি ফিরলেও শঙ্কা কাটেনি বিএনপির
-                    </h1>
+            <div className="lg:flex justify-center gap-20">
+                <div className="max-w-[800px] ">
+                    <div className="overflow-hidden rounded">
+                        <img className="h-[500px] w-full object-cover hover:scale-105 duration-500 transition ease-in-out" src={latestNews?.imageUrl} alt="" />
+                    </div>
+
+                    <Link to={`news/${latestNews?._id}`} className="hover:text-blue-600 ">
+                        <h1 className="text-4xl p-3">
+                            {latestNews?.title}
+                        </h1>
+                    </Link>
                     <p className="p-3">
-                        ঢাকা: ৫ আগস্টের পট পরিবর্তনের পর কিছুটা স্বাস্তির নিঃশ্বাস ফেললেও ভোটের রাজনীতি নিয়ে এখনো শঙ্কায় বিএনপি। এই শঙ্কা দূর করার শর্টকাট কোনো পথও খুঁজে পাচ্ছে না দলটি। দ্রুত নির্বাচনের দাবিতে এপ্রিল থেকে সমমনাদের নিয়ে ছোট ছোট কর্মসূচি দেওয়ার পরিকল্পনা থাকলেও সেখান থেকে সরে এসেছে তারা। কারণ, এই মুহূর্তে ড. মুহাম্মদ ইউনূসের নেতৃত্বাধীন অন্তর্বর্তী সরকার এবং […]
-                        খবর
+                        {latestNews?.content}
                     </p>
                 </div>
                 <div className="">
-                    <div className="w-[200px] ">
-                        <img className="h-[200px] w-full object-cover" src="https://i.ibb.co.com/m9Jkh0v/view-University-of-Oxford-England-Oxfordshire.webp " alt="" />
-                        <h1 className="text-2xl p-3">
-                            স্বস্তি ফিরলেও শঙ্কা কাটেনি বিএনপির
-                        </h1>
-                        {/* <p className="p-3">
-                            ঢাকা: ৫ আগস্টের পট পরিবর্তনের পর কিছুটা স্বাস্তির নিঃশ্বাস ফেললেও ভোটের রাজনীতি নিয়ে এখনো শঙ্কায় বিএনপি। এই শঙ্কা দূর করার শর্টকাট কোনো পথও খুঁজে পাচ্ছে না দলটি।
-                            খবর
-                        </p> */}
-                    </div>
-                    <div className="w-[200px] ">
-                        <img className="h-[200px] w-full object-cover" src="https://i.ibb.co.com/m9Jkh0v/view-University-of-Oxford-England-Oxfordshire.webp " alt="" />
-                        <h1 className="text-2xl p-3">
-                            স্বস্তি ফিরলেও শঙ্কা কাটেনি বিএনপির
-                        </h1>
-                        {/* <p className="p-3">
-                            ঢাকা: ৫ আগস্টের পট পরিবর্তনের পর কিছুটা স্বাস্তির নিঃশ্বাস ফেললেও ভোটের রাজনীতি নিয়ে এখনো শঙ্কায় বিএনপি। এই শঙ্কা দূর করার শর্টকাট কোনো পথও খুঁজে পাচ্ছে না দলটি।
-                            খবর
-                        </p> */}
-                    </div>
+                    {
+                        latest2nd3rdNews.map((newsInfo) => <div>
+
+                            <div className="lg:w-[200px] ">
+                                <div className="overflow-hidden rounded">
+                                    <img className="h-[200px] w-full object-cover hover:scale-105 duration-500 transition ease-in-out" src={newsInfo?.imageUrl} alt="" />
+                                </div>
+                                <Link to={`news/${newsInfo?._id}`} className="hover:text-blue-600 ">
+                                    <h1 className="text-2xl p-3">
+                                        {newsInfo?.title}
+                                    </h1>
+                                </Link>
+                            </div>
+
+                        </div>)
+
+                    }
+
+
                 </div>
                 {/* ad */}
-                <div className="relative ">
-                    <img className="max-w-[200px] h-full object-cover blur-sm" src="https://i.ibb.co.com/m9Jkh0v/view-University-of-Oxford-England-Oxfordshire.webp" alt="" />
+                <div className="relative mt-10 lg:mt-0">
+                    <img className="lg:max-w-[200px] h-full object-cover blur-sm" src="https://i.ibb.co.com/m9Jkh0v/view-University-of-Oxford-England-Oxfordshire.webp" alt="" />
                     <h1 className="text-2xl font-bold top-70 left-20 text-white absolute">Ads</h1>
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 

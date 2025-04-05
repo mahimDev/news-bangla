@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { FreeMode, Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { useState } from "react";
+
 const BreakingNews = ({ title }) => {
     const axiosnPublic = useAxiosPublic()
     const { data: news = [] } = useQuery({
@@ -22,7 +22,7 @@ const BreakingNews = ({ title }) => {
             return data
         }
     })
-    console.log(news)
+    const wi = 499
     return (
         <div>
             {
@@ -31,12 +31,26 @@ const BreakingNews = ({ title }) => {
             }
             {/*  */}
             <Swiper
-                // onSwiper={setSwiperRef}
-                slidesPerView={5}
+
+                slidesPerView={1}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 1500,
+                    delay: 2500,
                     disableOnInteraction: false
+                }}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                    1280: {
+                        slidesPerView: 4,
+                    },
                 }}
                 // spaceBetween={5}
                 // pagination={{

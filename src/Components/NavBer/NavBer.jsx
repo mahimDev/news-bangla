@@ -51,28 +51,30 @@ const NavBer = () => {
                 </Link>
             </div>
             {/* menu bar */}
-            <div className="flex justify-between w-10/12 mx-auto items-center">
-                <div className=" flex    py-4 px-10 ">
-                    {navLink}
-                </div>
-                <div className="flex">
-                    <div className="flex ">
-                        <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=59878&format=png&color=000000" alt="" />
-                        <h1 className="text-lg ml-1">Search</h1>
+            <div className="md:block hidden ">
+                <div className="  flex justify-between w-10/12 mx-auto items-center">
+                    <div className=" flex    py-4 px-10 ">
+                        {navLink}
                     </div>
-                    <div className="border mx-3 border-gray-500"></div>
-                    {user ?
-                        <button type="button" onClick={handleLogoutBtn} className="flex cursor-pointer ">
-                            <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=vGj0AluRnTSa&format=png&color=000000" alt="" />
-                            <h1 className="text-lg ml-1">Logout</h1>
-                        </button>
-                        :
-                        <Link to={"login"}>
-                            <div className="flex ">
-                                <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=43942&format=png&color=000000" alt="" />
-                                <h1 className="text-lg ml-1">Login</h1>
-                            </div>
-                        </Link>}
+                    <div className="flex">
+                        <div className="flex ">
+                            <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=59878&format=png&color=000000" alt="" />
+                            <h1 className="text-lg ml-1">Search</h1>
+                        </div>
+                        <div className="border mx-3 border-gray-500"></div>
+                        {user ?
+                            <button type="button" onClick={handleLogoutBtn} className="flex cursor-pointer ">
+                                <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=vGj0AluRnTSa&format=png&color=000000" alt="" />
+                                <h1 className="text-lg ml-1">Logout</h1>
+                            </button>
+                            :
+                            <Link to={"login"}>
+                                <div className="flex ">
+                                    <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=43942&format=png&color=000000" alt="" />
+                                    <h1 className="text-lg ml-1">Login</h1>
+                                </div>
+                            </Link>}
+                    </div>
                 </div>
             </div>
         </div>

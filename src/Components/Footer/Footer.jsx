@@ -1,7 +1,7 @@
 
 const Footer = () => {
     const date = new Date().getFullYear()
-    console.log(date)
+
     return (
         <div className="bg-blue-500 text-white">
             <div className="flex justify-center items-start  py-10 ">
