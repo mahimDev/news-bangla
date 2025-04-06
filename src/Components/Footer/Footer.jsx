@@ -4,7 +4,7 @@ const Footer = () => {
 
     return (
         <div className="bg-blue-500 text-white">
-            <div className="flex justify-center items-start  py-10 ">
+            <div className="lg:flex justify-center items-start  py-10 ">
                 <div className="flex-1 text-center">
                     <h1 className="text-2xl font-medium">News Bangla</h1>
                 </div>

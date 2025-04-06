@@ -31,6 +31,10 @@ const NavBer = () => {
 
             অপরাধ
         </NavLink>
+        <NavLink to={'/sports'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "bg-blue-600" : ""} `}>
+
+            খেলা
+        </NavLink>
     </>
     return (
         <div className="">

@@ -22,7 +22,7 @@ const BreakingNews = ({ title }) => {
             return data
         }
     })
-    const wi = 499
+
     return (
         <div>
             {
@@ -64,8 +64,8 @@ const BreakingNews = ({ title }) => {
 
                 {
                     news?.map((newsItem) =>
-                        <SwiperSlide className="  ">
-                            <div key={newsItem?._id} className="  text-center rounded bg-blue-200 hover:bg-amber-100 group w-52 h-76">
+                        <SwiperSlide className=" ">
+                            <div key={newsItem?._id} className=" text-center rounded bg-blue-200 hover:bg-amber-100 group w-52 h-76">
 
                                 <Link to={`news/${newsItem?._id}`}
                                     className="group-hover:text-blue-600">
