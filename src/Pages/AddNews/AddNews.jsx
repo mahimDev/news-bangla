@@ -90,12 +90,14 @@ const AddNews = () => {
                         required
                     >
                         <option value="">Select Category</option>
-                        <option value="Technology">Technology</option>
-                        <option value="Business">Business</option>
-                        <option value="Sports">Sports</option>
-                        <option value="Health">Health</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Weather">Weather</option>
+                        <option value="bangladesh">Bangladesh</option>
+                        <option value="international">International</option>
+                        <option value="technology">Technology</option>
+                        <option value="business">Business</option>
+                        <option value="sports">Sports</option>
+                        <option value="health">Health</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="weather">Weather</option>
                     </select>
 
                     {/* Author */}

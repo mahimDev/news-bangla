@@ -37,7 +37,7 @@ const NewsCard = () => {
                         </h1>
                     </Link>
                     <p className="p-3">
-                        {latestNews?.content}
+                        {latestNews?.content?.slice(0, 300)}...
                     </p>
                 </div>
                 <div className="">

@@ -22,7 +22,7 @@ const Sports = () => {
         }
         fatchData()
     }, [axiosnPublic])
-    console.log(latest2nd3rdSportsNews)
+    // console.log(latest2nd3rdSportsNews)
     return (
         <div>
             <h1 className="text-5xl font-medium my-10 flex items-center">
@@ -37,7 +37,7 @@ const Sports = () => {
                         </h1>
                     </Link>
                     <p className="p-3">
-                        {latestSportsNews?.content}
+                        {latestSportsNews?.content?.slice(0, 300)}...
                     </p>
                 </div>
                 <div className="space-y-2">

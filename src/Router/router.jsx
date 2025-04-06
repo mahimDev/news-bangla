@@ -5,6 +5,7 @@ import AddNews from "../Pages/AddNews/AddNews";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import NewsDetails from "../Pages/NewsDetails/NewsDetails";
+import CategoryNews from "../Pages/CategoryNews/CategoryNews";
 
 const router = createBrowserRouter([
     {
@@ -30,9 +31,14 @@ const router = createBrowserRouter([
             {
                 path: "news/:id",
                 element: <NewsDetails />,
+                loader: ({ params }) => fetch(`${import.meta.env.VITE_SEVER_API_URL}/newsDetails/${params?.id}`)
+            },
+            {
+                path: "category/:category",
+                element: <CategoryNews />,
                 // loader: ({ params }) =>
                 //     fetch(`${import.meta.env.VITE_SEVER_API_URL}news/${params?.id}`)
-            }
+            },
         ]
 
     }

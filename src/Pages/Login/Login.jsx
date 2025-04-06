@@ -9,15 +9,20 @@ const Login = () => {
         const form = new FormData(e.target)
         const email = form.get('email')
         const password = form.get('password')
-        userLogin(email, password)
-            .then((res) => {
-                // navigate("/")
-                console.log(res.user)
+        if (email === "admin@gmail.com" && password === "admin123") {
+            navigate("/addNews")
+        } else {
+            navigate("/")
+        }
+        // userLogin(email, password)
+        //     .then((res) => {
+        //         // navigate("/")
+        //         console.log(res.user)
 
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+        //     })
+        //     .catch((err) => {
+        //         console.log(err)
+        //     })
     }
     return (
         <div className="flex justify-center mt-10 p-10">
@@ -44,7 +49,7 @@ const Login = () => {
                     <button className="bg-red-600 py-2 w-full rounded text-xl font-medium text-white cursor-pointer">Login</button>
                 </form>
 
-                <p className="text-center text-xl">New to News Bangla ? <Link to={"/register"} className="text-red-700 hover:border-b">Create an account</Link> </p>
+                {/* <p className="text-center text-xl">New to News Bangla ? <Link to={"/register"} className="text-red-700 hover:border-b">Create an account</Link> </p> */}
             </div>
         </div>
     );

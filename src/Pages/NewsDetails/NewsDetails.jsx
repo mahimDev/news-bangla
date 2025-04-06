@@ -4,19 +4,21 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 
 const NewsDetails = () => {
-    const { pathname } = useLocation()
-    const id = pathname.split("/")[2]
-    const axiosnPublic = useAxiosPublic()
-    const { data: news = [] } = useQuery({
-        queryKey: ["news"],
-        queryFn: async () => {
-            const { data } = await axiosnPublic.get(`news/${id}`)
-
-            return data
-        }
-    })
+    const news = useLoaderData()
+    // const { pathname } = useLocation()
+    // const id = pathname.split("/")[2]
+    // const axiosnPublic = useAxiosPublic()
+    // const { data: news = [] } = useQuery({
+    //     queryKey: ["news", id],
+    //     queryFn: async () => {
+    //         const { data } = await axiosnPublic.get(`/news/${id}`)
+    //         console.log(data)
+    //         return data
+    //     }
+    // })
+    console.log(news)
     const {
-        author,
+
         category,
         content,
         imageUrl,
