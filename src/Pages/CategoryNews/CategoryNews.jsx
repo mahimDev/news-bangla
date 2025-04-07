@@ -24,6 +24,9 @@ const CategoryNews = () => {
                     <Link to={`/news/${items?._id}`} className="hover:text-blue-500">
                         <h1 className="text-2xl my-5">{items?.title}</h1>
                     </Link>
+                    <p className="p-3">
+                        {items?.content?.slice(0, 300)}...
+                    </p>
                 </div>
             )
             }

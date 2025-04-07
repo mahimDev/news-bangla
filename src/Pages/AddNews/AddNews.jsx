@@ -12,10 +12,12 @@ const AddNews = () => {
         imageUrl: "",
     });
     const [preview, setPreview] = useState(null);
+    const [proccess, setProccess] = useState(false)
     const axiosSecure = useAxiosSecure()
     const handleChange = (e) => {
         const { name, value } = e.target;
         setNews({ ...news, [name]: value });
+
     };
 
     const uploadImgBB = async (file) => {
@@ -25,6 +27,9 @@ const AddNews = () => {
         formData.append("image", file)
         try {
             const res = await axios.post(`${apiURL}?key=${apiKey}`, formData)
+            if (res.data.data.url) {
+                setProccess(false)
+            }
             return res.data.data.url
         } catch (err) {
             console.error(err)
@@ -35,6 +40,7 @@ const AddNews = () => {
     const handleImageChange = async (e) => {
         const file = e.target.files[0];
         if (file) {
+            setProccess(true)
             // const res = await axios.post(`${apiURL}?key=${apiKey}`, file)
             // console.log(res)
             const imageUrl = await uploadImgBB(file);
@@ -49,6 +55,14 @@ const AddNews = () => {
         console.log("News Submitted:", news);
         const { data } = await axiosSecure.post("addNews", news)
         if (data?.insertedId) {
+            setNews({
+                title: "",
+                content: "",
+                category: "",
+                author: "",
+                imageUrl: "",
+            })
+            setPreview("")
             alert("News Added")
         }
 
@@ -91,6 +105,7 @@ const AddNews = () => {
                     >
                         <option value="">Select Category</option>
                         <option value="bangladesh">Bangladesh</option>
+                        <option value="politics">Politics</option>
                         <option value="international">International</option>
                         <option value="technology">Technology</option>
                         <option value="business">Business</option>
@@ -130,7 +145,7 @@ const AddNews = () => {
                         type="submit"
                         className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition"
                     >
-                        Add News
+                        {proccess ? "proccessing..." : "Add News"}
                     </button>
                 </form>
             </div>

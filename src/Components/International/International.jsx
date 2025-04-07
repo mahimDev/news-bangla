@@ -19,6 +19,7 @@ const International = () => {
         const fatchData = async () => {
             const { data } = await axiosnPublic.get("/latest2nd3rdInternationalNews")
             setLatest2nd3rdNews(data)
+            console.log(data)
         }
         fatchData()
     }, [axiosnPublic])
@@ -41,7 +42,7 @@ const International = () => {
                 </div>
                 <div className="space-y-2">
                     {latest2nd3rdNews?.map((item) =>
-                        <div key={item?._id} className="bg-blue-50 flex p-2 rounded">
+                        <div key={item?._id} className="bg-blue-50 md:flex p-2 rounded">
                             <img className="max-w-[200px] max-h-[150px] w-full object-cover rounded" src={item?.imageUrl} alt="" />
 
                             <Link to={`news/${item?._id}`} className="hover:text-blue-600 ">
@@ -49,7 +50,7 @@ const International = () => {
                                     {item?.title}
                                 </h1>
                             </Link>
-                            {item?.category}
+
                         </div>
                     )
 

@@ -41,7 +41,7 @@ const Entertainment = () => {
                 </div>
                 <div className="space-y-2">
                     {latest2nd3rdNews?.map((item) =>
-                        <div key={item?._id} className="bg-blue-50 flex p-2 rounded">
+                        <div key={item?._id} className="bg-blue-50 md:flex p-2 rounded">
                             <img className="max-w-[200px] max-h-[150px] w-full object-cover rounded" src={item?.imageUrl} alt="" />
 
                             <Link to={`news/${item?._id}`} className="hover:text-blue-600 ">
@@ -49,7 +49,7 @@ const Entertainment = () => {
                                     {item?.title}
                                 </h1>
                             </Link>
-                            {item?.category}
+
                         </div>
                     )
 

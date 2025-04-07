@@ -24,6 +24,12 @@ const NavBer = () => {
             </NavLink>
         </li>
         <li>
+            <NavLink to={'category/politics'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
+
+                রাজনীতি
+            </NavLink>
+        </li>
+        <li>
             <NavLink to={'category/bangladesh'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
 
                 বাংলাদেশ
