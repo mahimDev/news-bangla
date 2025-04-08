@@ -40,11 +40,11 @@ const NewsCard = () => {
                         {latestNews?.content?.slice(0, 300)}...
                     </p>
                 </div>
-                <div className="">
+                <div className="space-y-2">
                     {
-                        latest2nd3rdNews.map((newsInfo) => <div>
+                        latest2nd3rdNews?.map((newsInfo) => <div>
 
-                            <div className="lg:w-[200px] ">
+                            <div className="lg:w-[200px] border rounded p-1">
                                 <div className="overflow-hidden rounded">
                                     <img className="h-[200px] w-full object-cover hover:scale-105 duration-500 transition ease-in-out" src={newsInfo?.imageUrl} alt="" />
                                 </div>

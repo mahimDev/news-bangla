@@ -7,14 +7,14 @@ import Sports from "../../Components/Sports/Sports";
 const Home = () => {
 
     return (
-        <div className="w-10/12 mx-auto  min-h-[80vh]">
-            <div className=" mx-auto my-10">
+        <div className="md:w-10/12 mx-auto space-y-10 md:my-20 min-h-[80vh]">
+            <div className="  mx-auto my-10">
                 <BreakingNews />
             </div>
             <div className="my-20">
                 <NewsCard />
             </div>
-            <div className="   my-10">
+            <div className=" my-10">
                 <BreakingNews />
             </div>
             <div className="flex justify-center">

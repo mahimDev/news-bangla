@@ -110,7 +110,6 @@ const AddNews = () => {
                         <option value="technology">Technology</option>
                         <option value="business">Business</option>
                         <option value="sports">Sports</option>
-                        <option value="health">Health</option>
                         <option value="entertainment">Entertainment</option>
                         <option value="weather">Weather</option>
                     </select>

@@ -43,7 +43,7 @@ const International = () => {
                 <div className="space-y-2">
                     {latest2nd3rdNews?.map((item) =>
                         <div key={item?._id} className="bg-blue-50 md:flex p-2 rounded">
-                            <img className="max-w-[200px] max-h-[150px] w-full object-cover rounded" src={item?.imageUrl} alt="" />
+                            <img className="md:max-w-[200px] md:max-h-[150px] w-full object-cover rounded" src={item?.imageUrl} alt="" />
 
                             <Link to={`news/${item?._id}`} className="hover:text-blue-600 ">
                                 <h1 className="text-2xl p-3">

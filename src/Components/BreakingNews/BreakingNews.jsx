@@ -65,14 +65,14 @@ const BreakingNews = ({ title }) => {
                 {
                     news?.map((newsItem) =>
                         <SwiperSlide className=" ">
-                            <div key={newsItem?._id} className=" text-center rounded bg-blue-200 hover:bg-amber-100 group w-52 h-76">
+                            <div key={newsItem?._id} className=" text-center rounded md:bg-blue-200 hover:bg-amber-50 group md:w-52 md:h-76">
 
                                 <Link to={`news/${newsItem?._id}`}
                                     className="group-hover:text-blue-600">
-                                    <div className="overflow-hidden rounded">
-                                        <img className="w-full h-44 mx-auto object-cover rounded-t group-hover:scale-110 duration-500 transition ease-in-out" src={newsItem?.imageUrl} alt="" />
+                                    <div className="overflow-hidden rounded p-5  md:p-0">
+                                        <img className="w-full   md:h-44 mx-auto object-cover rounded-t group-hover:scale-110 duration-500 transition ease-in-out" src={newsItem?.imageUrl} alt="" />
                                     </div>
-                                    <h1 className="w-44 mx-auto mt-2">{newsItem?.title}</h1>
+                                    <h1 className="md:w-44 w-full mx-auto mt-2  font-semibold">{newsItem?.title}</h1>
 
                                 </Link>
 

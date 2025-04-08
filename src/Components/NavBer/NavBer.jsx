@@ -42,6 +42,18 @@ const NavBer = () => {
             </NavLink>
         </li>
         <li>
+            <NavLink to={'category/business'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
+
+                ব্যবসা-বাণিজ্য
+            </NavLink>
+        </li>
+        <li>
+            <NavLink to={'category/technology'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
+
+                প্রযুক্তি
+            </NavLink>
+        </li>
+        <li>
             <NavLink to={'category/sports'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
 
                 খেলা
@@ -51,6 +63,12 @@ const NavBer = () => {
             <NavLink to={'category/entertainment'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
 
                 বিনোদন
+            </NavLink>
+        </li>
+        <li>
+            <NavLink to={'category/weather'} className={({ isActive }) => `hover:bg-blue-600 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-blue-600 text-white" : ""} `}>
+
+                আবহাওয়া
             </NavLink>
         </li>
     </>
@@ -89,7 +107,9 @@ const NavBer = () => {
             {/* logo */}
             <div>
                 <Link to="/">
-                    <h1 className="text-4xl font-bold bg-blue-500 text-center text-white py-8 mb-2 ">News Bangla</h1>
+                    <h1 className="text-4xl font-bold bg-blue-500 flex  justify-between text-white md:py-8 py-4 mb-2 md:px-32 px-7">
+                        <img className="w-10" src="https://i.ibb.co.com/xK56svt9/Whats-App-Image-2025-04-08-at-01-49-24-5b71c74e.jpg" />
+                        Nekre News</h1>
                 </Link>
             </div>
             {/* menu bar */}
