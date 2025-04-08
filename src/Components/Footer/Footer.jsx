@@ -4,10 +4,11 @@ const Footer = () => {
     const date = new Date().getFullYear()
 
     return (
-        <div className="bg-blue-500 text-white">
+        <div className="bg-green-800 text-white">
             <div className="lg:flex justify-center items-start  p-10 space-y-5">
                 <div className="flex-1 text-center">
                     <h1 className="text-2xl font-medium">Nekre News</h1>
+                    <p className="mt-2 md:w-1/3 mx-auto">Coventry Road, Small heath, Birmingham B10</p>
                 </div>
                 <div className="flex-1">
                     <p>

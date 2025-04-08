@@ -52,7 +52,8 @@ const AddNews = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("News Submitted:", news);
+        const { title, content, imageUrl, author } = news
+        console.log(content)
         const { data } = await axiosSecure.post("addNews", news)
         if (data?.insertedId) {
             setNews({

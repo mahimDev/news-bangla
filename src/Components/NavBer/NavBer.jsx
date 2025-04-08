@@ -80,7 +80,10 @@ const NavBer = () => {
                 <h1 className="font-medium text-xl">{date}</h1>
                 <div className="hidden md:block">
                     <div className=" flex gap-1">
-                        <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="" />
+                        <Link to="https://www.facebook.com/nekrenews">
+                            <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="" />
+                        </Link>
+
                         <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="" />
                         <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="" />
                         <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="" />
@@ -98,7 +101,7 @@ const NavBer = () => {
                             </button>
                     }
                     {
-                        isOpen && <ul className="absolute right-0 top-20 bg-blue-500 p-2 rounded flex-col">
+                        isOpen && <ul className="absolute right-0 top-[66px] bg-green-700 p-2 rounded flex-col">
                             {navLink}
                         </ul>
                     }
@@ -107,9 +110,9 @@ const NavBer = () => {
             {/* logo */}
             <div>
                 <Link to="/">
-                    <h1 className="text-4xl font-bold bg-blue-500 flex  justify-between text-white md:py-8 py-4 mb-2 md:px-32 px-7">
-                        <img className="w-10" src="https://i.ibb.co.com/xK56svt9/Whats-App-Image-2025-04-08-at-01-49-24-5b71c74e.jpg" />
-                        Nekre News</h1>
+                    <div className=" font-bold bg-green-800 flex  justify-center text-white    ">
+                        <img className="w-32 h-22 object-cover   " src="https://i.ibb.co.com/xK56svt9/Whats-App-Image-2025-04-08-at-01-49-24-5b71c74e.jpg" />
+                    </div>
                 </Link>
             </div>
             {/* menu bar */}

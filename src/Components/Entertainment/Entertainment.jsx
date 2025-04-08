@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Entertainment = () => {
     const [latestNews, setLatestNews] = useState({})
@@ -28,7 +29,7 @@ const Entertainment = () => {
                 <div className="bg-blue-500 w-2 h-14  mr-2"></div>    বিনোদন
             </h1>
             <div className="lg:flex gap-20">
-                <div className="max-w-[600px] ">
+                {/* <div className="max-w-[600px] ">
                     <img className="max-h-[300px] w-full object-cover" src={latestNews?.imageUrl} alt="" />
                     <Link to={`news/${latestNews?._id}`} className="hover:text-blue-600 ">
                         <h1 className="text-4xl p-3">
@@ -38,6 +39,18 @@ const Entertainment = () => {
                     <p className="p-3">
                         {latestNews?.content?.slice(0, 300)}...
                     </p>
+                </div> */}
+                <div className="max-w-[600px]">
+                    <Helmet>
+                        <meta property="og:title" content={latestNews?.title} />
+                        <meta property="og:image" content={latestNews?.imageUrl} />
+                    </Helmet>
+
+                    <img className="max-h-[300px] w-full object-cover" src={latestNews?.imageUrl} alt={latestNews?.title} />
+                    <Link to={`news/${latestNews?._id}`} className="hover:text-blue-600">
+                        <h1 className="text-4xl p-3">{latestNews?.title}</h1>
+                    </Link>
+                    <p className="p-3">{latestNews?.content?.slice(0, 300)}...</p>
                 </div>
                 <div className="space-y-2">
                     {latest2nd3rdNews?.map((item) =>

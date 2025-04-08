@@ -63,8 +63,8 @@ const NewsCard = () => {
                 </div>
                 {/* ad */}
                 <div className="relative mt-10 lg:mt-0">
-                    <img className="lg:max-w-[200px] h-full object-cover blur-sm" src="https://i.ibb.co.com/m9Jkh0v/view-University-of-Oxford-England-Oxfordshire.webp" alt="" />
-                    <h1 className="text-2xl font-bold top-70 left-20 text-white absolute">Ads</h1>
+                    <img className="lg:max-w-[200px] h-full object-cover blur-sm" src="https://i.ibb.co.com/S7Q9vvqf/94772.webp" alt="" />
+                    <h1 className="text-2xl font-bold top-70 md:left-20 left-[47%] text-white absolute ">Ads</h1>
                 </div>
             </div>
 

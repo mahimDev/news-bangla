@@ -65,7 +65,7 @@ const BreakingNews = ({ title }) => {
                 {
                     news?.map((newsItem) =>
                         <SwiperSlide className=" ">
-                            <div key={newsItem?._id} className=" text-center rounded md:bg-blue-200 hover:bg-amber-50 group md:w-52 md:h-76">
+                            <div key={newsItem?._id} className=" text-center rounded md:bg-green-100 hover:bg-blue-50 group md:w-52 md:h-76">
 
                                 <Link to={`news/${newsItem?._id}`}
                                     className="group-hover:text-blue-600">
