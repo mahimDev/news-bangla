@@ -7,7 +7,7 @@ import Sports from "../../Components/Sports/Sports";
 const Home = () => {
 
     return (
-        <div className="md:w-10/12 mx-auto space-y-10 md:my-20 min-h-[80vh]">
+        <div className="md:w-10/12 mx-auto space-y-10 md:my-20 min-h-[80vh] p-1">
             <div className="  mx-auto my-10">
                 <BreakingNews />
             </div>

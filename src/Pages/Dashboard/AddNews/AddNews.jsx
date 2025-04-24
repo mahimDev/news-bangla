@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 
 const AddNews = () => {

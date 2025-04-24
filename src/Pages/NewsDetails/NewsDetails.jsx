@@ -31,15 +31,15 @@ const NewsDetails = () => {
 
     return (
         <div className="">
-            <Helmet >
-                <title>{title}</title>
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={content} />
-                <meta property="og:image" content={imageUrl} />
-                <meta property="og:url" content={`https://nekrenews.net/news/${_id}`} />
-                <meta property="og:type" content="article" />
-                <meta name="twitter:card" content="summary_large_image" />
-            </Helmet>
+            {/* <Helmet > */}
+            {/* <title>{title}</title> */}
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={content} />
+            <meta property="og:image" content={imageUrl} />
+            <meta property="og:url" content={`https://nekrenews.net/news/${_id}`} />
+            <meta property="og:type" content="article" />
+            {/* <meta name="twitter:card" content="summary_large_image" /> */}
+            {/* </Helmet> */}
             <div className="mx-auto max-w-[1000px]  p-10">
                 <img className=" mx-auto" src={imageUrl} alt="" />
                 <h1 className="text-4xl my-7 ">{title}</h1>

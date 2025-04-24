@@ -5,7 +5,7 @@ import Footer from "../Components/Footer/Footer";
 const MainLayout = () => {
     return (
         <div className="">
-            <nav className="sticky -top-[170px] z-[100] bg-white shadow-lg">
+            <nav className="sticky -top-[160px] md:-top-[145px] z-[100] bg-white shadow-lg">
                 <NavBer />
             </nav>
             <main>

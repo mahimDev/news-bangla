@@ -44,7 +44,7 @@ const NewsCard = () => {
                     {
                         latest2nd3rdNews?.map((newsInfo) => <div>
 
-                            <div className="lg:w-[200px] border rounded p-1">
+                            <div className="lg:w-[200px] bg-green-100 rounded p-1">
                                 <div className="overflow-hidden rounded">
                                     <img className="h-[200px] w-full object-cover hover:scale-105 duration-500 transition ease-in-out" src={newsInfo?.imageUrl} alt="" />
                                 </div>

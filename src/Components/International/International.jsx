@@ -26,7 +26,7 @@ const International = () => {
     return (
         <div>
             <h1 className="text-5xl font-medium my-10 flex items-center">
-                <div className="bg-blue-500 w-2 h-14  mr-2"></div>   আন্তর্জাতিক
+                <div className="bg-green-800 w-2 h-14  mr-2"></div>   আন্তর্জাতিক
             </h1>
             <div className="lg:flex gap-20">
                 <div className="max-w-[600px] ">

@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
-import AddNews from "../Pages/AddNews/AddNews";
+import AddNews from "../Pages/Dashboard/AddNews/AddNews";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import NewsDetails from "../Pages/NewsDetails/NewsDetails";
 import CategoryNews from "../Pages/CategoryNews/CategoryNews";
 import ShareRedirect from "../Pages/ShareRedirect/ShareRedirect";
+import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -26,10 +27,6 @@ const router = createBrowserRouter([
                 element: <Register />
             },
             {
-                path: "addNews",
-                element: <AddNews />
-            },
-            {
                 path: "news/:id",
                 element: <NewsDetails />,
                 loader: ({ params }) => fetch(`${import.meta.env.VITE_SEVER_API_URL}/newsDetails/${params?.id}`)
@@ -42,11 +39,20 @@ const router = createBrowserRouter([
             {
                 path: "category/:category",
                 element: <CategoryNews />,
-                // loader: ({ params }) =>
-                //     fetch(`${import.meta.env.VITE_SEVER_API_URL}news/${params?.id}`)
+
             },
         ]
 
+    },
+    {
+        path: "dashboard",
+        element: <Dashboard />,
+        children: [
+            {
+                path: "add-news",
+                element: <AddNews />
+            }
+        ]
     }
 ])
 
