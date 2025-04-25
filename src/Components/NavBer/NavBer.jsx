@@ -1,13 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
-import useIsAdmin from "../../Hooks/useIsAdmin";
+import useRole from "../../Hooks/useRole";
 
 const NavBer = () => {
     const [isOpen, setIsOpen] = useState(false)
     const date = new Date().toDateString()
     const { user, userLogout } = useAuth()
-    const { isAdmin } = useIsAdmin()
+    const { isAdmin } = useRole()
     console.log(isAdmin)
     const handleLogoutBtn = () => {
         userLogout()
@@ -140,7 +140,7 @@ const NavBer = () => {
                                     rounded space-y-2">
                                         <p className="font-semibold text-white">{user?.email}</p>
                                         {/* dashboard */}
-                                        {isAdmin?.isAdmin === true && <div>
+                                        {isAdmin === true && <div>
                                             <Link to="/dashboard/add-news">
                                                 <h1 className="text-lg px-2  hover:scale-105 duration-300  cursor-pointer   bg-gray-900 py-1  text-white font-medium rounded">
                                                     Dashboard</h1>

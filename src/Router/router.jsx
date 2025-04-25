@@ -8,6 +8,8 @@ import NewsDetails from "../Pages/NewsDetails/NewsDetails";
 import CategoryNews from "../Pages/CategoryNews/CategoryNews";
 import ShareRedirect from "../Pages/ShareRedirect/ShareRedirect";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
+import AdminRoute from "../SecureRoute/AdminRoute";
+import AllNews from "../Pages/Dashboard/AllNews/AllNews";
 
 const router = createBrowserRouter([
     {
@@ -46,12 +48,19 @@ const router = createBrowserRouter([
     },
     {
         path: "dashboard",
-        element: <Dashboard />,
+        element:
+            <AdminRoute>
+                <Dashboard />
+            </AdminRoute>,
         children: [
             {
                 path: "add-news",
                 element: <AddNews />
-            }
+            },
+            {
+                path: "all-news",
+                element: <AllNews />
+            },
         ]
     }
 ])

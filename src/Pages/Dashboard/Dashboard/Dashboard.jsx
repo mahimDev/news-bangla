@@ -24,7 +24,7 @@ const Dashboard = () => {
     </>
     return (
         <div className="grid grid-cols-12">
-            <div className="col-span-3 bg-lime-900 h-screen">
+            <div className="col-span-3 bg-lime-900 min-h-screen">
                 <h1 className=" text-2xl  text-white text-center py-4 border-b mb-5 "> Admin Panel</h1>
 
                 <Link to="/">
