@@ -4,7 +4,7 @@ const Footer = () => {
     const date = new Date().getFullYear()
 
     return (
-        <div className="bg-green-800 text-white">
+        <div className="backgroundGradient text-white">
             <div className="lg:flex justify-center items-start  p-10 space-y-5">
                 <div className="flex-1 text-center">
                     <h1 className="text-2xl font-medium">Nekre News</h1>

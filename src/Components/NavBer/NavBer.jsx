@@ -136,7 +136,7 @@ const NavBer = () => {
                                 <div className="relative  px-2  group shadow-2xl">
                                     <img className="w-9 rounded-full" src={`${user.displayname || "https://img.icons8.com/?size=100&id=23493&format=png&color=000000"}`} alt="" />
                                     <div
-                                        className="absolute -right-16  hidden group-hover:block bg-green-800  min-w-[120px] p-3 text-center
+                                        className="absolute -right-16  hidden group-hover:block backgroundGradient  min-w-[120px] p-3 text-center
                                     rounded space-y-2">
                                         <p className="font-semibold text-white">{user?.email}</p>
                                         {/* dashboard */}

@@ -69,9 +69,9 @@ const AddNews = () => {
 
     };
     return (
-        <div className="p-10">
+        <div className="p-20">
             <h1 className="text-center font-bold text-4xl">   Upload News</h1>
-            <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+            <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
                 <h2 className="text-2xl font-bold mb-5">Add News Article</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     {/* Title */}
@@ -143,7 +143,7 @@ const AddNews = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full bg-green-800 text-white py-3 rounded-md hover:bg-green-700 transition text-lg font-bold"
+                        className="w-full backgroundGradient text-white py-3 rounded-md hover:bg-green-700 transition text-lg font-bold"
                     >
                         {proccess ? "proccessing..." : "Add News"}
                     </button>

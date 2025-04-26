@@ -24,11 +24,11 @@ const Dashboard = () => {
     </>
     return (
         <div className="grid grid-cols-12">
-            <div className="col-span-3 bg-green-800 min-h-screen">
+            <div className="col-span-3 backgroundGradient min-h-screen">
                 <h1 className=" text-2xl  text-white text-center py-4 border-b mb-5 "> Admin Panel</h1>
 
                 <Link to="/">
-                    <h1 className=" text-2xl bg-gray-900 text-white text-center py-2 w-1/2 mx-auto rounded">Go To Home</h1>
+                    <h1 className=" text-2xl bg-gradient-to-br from-[#1b6001] via-[#073207dd] to-[#000d03db] hover:from-[#2786049a] hover:via-[#016001ab] hover:scale-105 duration-300 transform-3d  text-white text-center py-2 w-1/2 mx-auto rounded">Go To Home</h1>
                 </Link>
                 <ul className="text-lg p-10  font-semibold  space-y-2 ">
                     {menu}
