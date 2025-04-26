@@ -24,17 +24,17 @@ const Dashboard = () => {
     </>
     return (
         <div className="grid grid-cols-12">
-            <div className="col-span-3 bg-lime-900 min-h-screen">
+            <div className="col-span-3 bg-green-800 min-h-screen">
                 <h1 className=" text-2xl  text-white text-center py-4 border-b mb-5 "> Admin Panel</h1>
 
                 <Link to="/">
-                    <h1 className=" text-2xl bg-fuchsia-900 text-white text-center py-2 border-b-2">Go To Home</h1>
+                    <h1 className=" text-2xl bg-gray-900 text-white text-center py-2 w-1/2 mx-auto rounded">Go To Home</h1>
                 </Link>
                 <ul className="text-lg p-10  font-semibold  space-y-2 ">
                     {menu}
                 </ul>
             </div>
-            <div className="col-span-9">
+            <div className="col-span-9 w-full">
                 <Outlet />
             </div>
         </div>
