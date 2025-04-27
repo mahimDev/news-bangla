@@ -26,7 +26,7 @@ const Entertainment = () => {
     return (
         <div>
             <h1 className="text-5xl font-medium my-10 flex items-center">
-                <div className="bg-green-800 w-2 h-14  mr-2"></div>    বিনোদন
+                <div className="backgroundGradient w-2 h-14  mr-2"></div>    বিনোদন
             </h1>
             <div className="lg:flex gap-20">
                 {/* <div className="max-w-[600px] ">

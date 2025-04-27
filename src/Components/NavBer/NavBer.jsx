@@ -8,7 +8,6 @@ const NavBer = () => {
     const date = new Date().toDateString()
     const { user, userLogout } = useAuth()
     const { isAdmin } = useRole()
-    console.log(isAdmin)
     const handleLogoutBtn = () => {
         userLogout()
             .then(() => {
@@ -134,9 +133,9 @@ const NavBer = () => {
                         <div>
                             {user ?
                                 <div className="relative  px-2  group shadow-2xl">
-                                    <img className="w-9 rounded-full" src={`${user.displayname || "https://img.icons8.com/?size=100&id=23493&format=png&color=000000"}`} alt="" />
+                                    <img className="w-9 rounded-full" src={`${user?.displayname || "https://img.icons8.com/?size=100&id=23493&format=png&color=000000"}`} alt="" />
                                     <div
-                                        className="absolute -right-16  hidden group-hover:block backgroundGradient  min-w-[120px] p-3 text-center
+                                        className="absolute -right-16 hidden  group-hover:block backgroundGradient  min-w-[120px] p-3 text-center
                                     rounded space-y-2">
                                         <p className="font-semibold text-white">{user?.email}</p>
                                         {/* dashboard */}
@@ -149,7 +148,7 @@ const NavBer = () => {
                                         {/* logout btn */}
                                         <h1
                                             onClick={handleLogoutBtn}
-                                            className="text-lg pr-2  flex justify-center items-center cursor-pointer   hover:scale-105 duration-300 bg-red-700 text-white font-medium rounded ">
+                                            className="text-lg pr-2  flex justify-center items-center cursor-pointer   hover:scale-105 duration-300 gradientRed text-white font-medium rounded ">
                                             <img className="w-8 h-8" src="https://img.icons8.com/?size=100&id=vGj0AluRnTSa&format=png&color=ffffff" alt="" />Logout</h1>
                                     </div>
                                 </div>

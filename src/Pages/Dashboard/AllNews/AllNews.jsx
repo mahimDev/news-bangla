@@ -64,7 +64,7 @@ const AllNews = () => {
                                 </button>
                                 <button
                                     onClick={() => handleDeleteBtn(item?._id)}
-                                    className="bg-red-600 hover:scale-110 scale-100 transition-all duration-300 text-white py-2 px-4 rounded-md">
+                                    className="gradientRed hover:scale-110 scale-100 transition-all duration-300 text-white py-2 px-4 rounded-md">
                                     Delete
                                 </button>
                             </td>
@@ -91,7 +91,7 @@ const AllNews = () => {
                                 </button>
                                 <button
                                     onClick={confirmDelete}
-                                    className="bg-red-700 hover:scale-110 scale-100 transition-all duration-300 text-white py-2 px-4 rounded-md border-2 border-red-700">
+                                    className="gradientRed hover:scale-110 scale-100 transition-all duration-300 text-white py-2 px-4 rounded-md border-2 border-red-700">
                                     Delete
                                 </button>
                             </div>
