@@ -22,54 +22,54 @@ const NavBer = () => {
 
     const navLink = <>
         <li>
-            <NavLink to={'/'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'/'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
                 সর্বশেষ
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/politics'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/politics'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 রাজনীতি
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/bangladesh'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/bangladesh'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 বাংলাদেশ
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/international'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/international'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 আন্তর্জাতিক
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/business'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/business'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 ব্যবসা-বাণিজ্য
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/technology'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/technology'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 প্রযুক্তি
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/sports'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/sports'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 খেলা
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/entertainment'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/entertainment'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 বিনোদন
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/weather'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
+            <NavLink to={'category/weather'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
 
                 আবহাওয়া
             </NavLink>
@@ -80,7 +80,7 @@ const NavBer = () => {
 
             <div className=" flex justify-between items-center py-3 w-10/12 mx-auto">
                 {/* social and date */}
-                <h1 className="font-medium text-xl">{date}</h1>
+                <h1 className="font-medium md:text-xl">{date}</h1>
                 <div className="hidden md:block">
                     <div className=" flex gap-1">
                         <Link to="https://www.facebook.com/nekrenews">
@@ -93,18 +93,18 @@ const NavBer = () => {
                     </div>
                 </div>
                 {/* menu for mobile */}
-                <div className="md:hidden block">
+                <div className=" lg:hidden block">
                     {
                         isOpen ? <button onClick={() => setIsOpen(false)}>
-                            <img className="w-9 transition duration-300 hover:rotate-12" src="https://img.icons8.com/?size=100&id=18496&format=png&color=000000" />
+                            <img className="w-6 md:w-9 transition duration-300 hover:rotate-12" src="https://img.icons8.com/?size=100&id=18496&format=png&color=000000" />
                         </button>
                             :
                             <button onClick={() => setIsOpen(true)}>
-                                <img className="w-9" src="https://img.icons8.com/?size=100&id=lPZm1KMY52UO&format=png&color=136923" />
+                                <img className="w-6 md:w-9" src="https://img.icons8.com/?size=100&id=lPZm1KMY52UO&format=png&color=136923" />
                             </button>
                     }
                     {
-                        isOpen && <ul className="absolute right-0 top-[66px] bg-green-700 p-2 rounded flex-col">
+                        isOpen && <ul className="absolute right-0 top-[60px] backgroundGradient text-white p-2 rounded flex-col space-y-2">
                             {navLink}
                         </ul>
                     }
@@ -113,13 +113,13 @@ const NavBer = () => {
             {/* logo */}
             <div>
                 <Link to="/">
-                    <div className="  flex  justify-center text-white    ">
-                        <img className="w-32 h-22 object-cover   " src="https://i.ibb.co.com/xK56svt9/Whats-App-Image-2025-04-08-at-01-49-24-5b71c74e.jpg" />
+                    <div className="  flex  justify-center  bg-gray-100 pb-2 ">
+                        <img className="w-40 h-16 object-cover   rounded" src="logo.jpg" />
                     </div>
                 </Link>
             </div>
             {/* menu bar larger */}
-            <div className="md:block hidden  ">
+            <div className="lg:block hidden  ">
                 <div className="  flex justify-between w-10/12 mx-auto items-center">
                     <ul className=" flex  py-4 px-10 ">
                         {navLink}
