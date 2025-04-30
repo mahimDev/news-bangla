@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import { useLoaderData, useLocation } from "react-router-dom";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import { useQuery } from "@tanstack/react-query";
+
+import { useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const NewsDetails = () => {
@@ -17,7 +15,7 @@ const NewsDetails = () => {
     //         return data
     //     }
     // })
-    console.log(news)
+
     const {
 
         category,
@@ -27,7 +25,7 @@ const NewsDetails = () => {
         _id }
         = news
 
-    const w = content.split("\n")
+    const cont = content?.split("\n")
 
     return (
         <div className="">
@@ -44,7 +42,7 @@ const NewsDetails = () => {
                 <img className=" mx-auto" src={imageUrl} alt="" />
                 <h1 className="text-4xl my-7 ">{title}</h1>
                 {
-                    w?.map((item, i) =>
+                    cont?.map((item, i) =>
                         <p key={i} className="my-4">
                             {item}
                         </p>
