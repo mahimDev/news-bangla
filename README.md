@@ -120,4 +120,7 @@ Frontend Developer
 
 ```
 
+---
+
+Would you like me to generate a Bengali version too for local developers or viewers?
 ```
