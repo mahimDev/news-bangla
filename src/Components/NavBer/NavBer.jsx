@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import useRole from "../../Hooks/useRole";
-
+import logo from '../../assets/logo.jpg';
 const NavBer = () => {
     const [isOpen, setIsOpen] = useState(false)
     const date = new Date().toDateString()
@@ -22,54 +22,54 @@ const NavBer = () => {
 
     const navLink = <>
         <li>
-            <NavLink to={'/'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'/'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
                 সর্বশেষ
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/politics'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/politics'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 রাজনীতি
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/bangladesh'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/bangladesh'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 বাংলাদেশ
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/international'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/international'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 আন্তর্জাতিক
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/business'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/business'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 ব্যবসা-বাণিজ্য
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/technology'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/technology'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 প্রযুক্তি
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/sports'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/sports'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 খেলা
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/entertainment'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/entertainment'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 বিনোদন
             </NavLink>
         </li>
         <li>
-            <NavLink to={'category/weather'} className={({ isActive }) => `hover:bg-green-700/50 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-700/50 text-white" : ""} `}>
+            <NavLink to={'category/weather'} className={({ isActive }) => `hover:bg-green-800 hover:text-white  py-1 px-4 w-36 text-start ${isActive ? "md:bg-green-800 text-white" : ""} `}>
 
                 আবহাওয়া
             </NavLink>
@@ -114,7 +114,7 @@ const NavBer = () => {
             <div>
                 <Link to="/">
                     <div className="  flex  justify-center  bg-gray-100 pb-2 ">
-                        <img className="w-40 h-16 object-cover   rounded" src="logo.jpg" />
+                        <img className="w-40 h-16 object-cover   rounded" src={logo} />
                     </div>
                 </Link>
             </div>
