@@ -1,8 +1,3 @@
-Here's a clean and focused **frontend-only `README.md`** file for your MERN project `NekreNews`:
-
----
-
-```markdown
 # 📰 NekreNews Frontend
 
 **NekreNews** is a modern news platform frontend built using **React 19**, **Tailwind CSS 4**, and **React Router DOM 7**. It is designed to work with a separate backend (Node.js + Express + MongoDB). The frontend is fully responsive, SEO-ready, and optimized for performance using React Query and Firebase.
@@ -40,7 +35,6 @@ Here's a clean and focused **frontend-only `README.md`** file for your MERN proj
 ---
 
 ## 📁 Project Structure
-```
 
 src/
 ├── components/
@@ -50,10 +44,6 @@ src/
 ├── App.jsx
 └── main.jsx
 
-````
-
----
-
 ## 🛠️ Getting Started
 
 ### 1. Clone the repository
@@ -61,7 +51,7 @@ src/
 ```bash
 git clone https://github.com/your-username/nekrenews-frontend.git
 cd nekrenews-frontend
-````
+```
 
 ### 2. Install dependencies
 
@@ -117,10 +107,3 @@ You are free to use, copy, and modify for learning or production.
 Frontend Developer  
 📍 Faridpur, Bangladesh  
 🌐 [https://nekrenews.net](https://nekrenews.net)
-
-```
-
----
-
-Would you like me to generate a Bengali version too for local developers or viewers?
-```
