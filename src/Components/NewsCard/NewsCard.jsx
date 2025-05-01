@@ -42,7 +42,7 @@ const NewsCard = () => {
                 </div>
                 <div className="space-y-2">
                     {
-                        latest2nd3rdNews?.map((newsInfo) => <div>
+                        latest2nd3rdNews?.map((newsInfo) => <div key={newsInfo?._id}>
 
                             <div className="lg:w-[200px] bg-green-100 rounded p-1">
                                 <div className="overflow-hidden rounded">

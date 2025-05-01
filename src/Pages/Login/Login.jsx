@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-
+import { toast } from 'react-toastify';
 const Login = () => {
-    const { userLogin, user, loginWithGoogle } = useAuth()
+    const { userLogin, loginWithGoogle } = useAuth()
     const navigate = useNavigate()
     // user login 
     const handleLoginBtn = (e) => {
@@ -12,12 +12,34 @@ const Login = () => {
         const password = form.get('password')
         userLogin(email, password)
             .then((res) => {
-                // navigate("/")
-                console.log(res.user)
+                toast.success("Login sucessfully", {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+
+                })
+                navigate("/")
+
 
             })
             .catch((err) => {
-                console.log(err)
+                const error = err?.code.split("-").join(" ").split("/").join(" ")
+                toast.error(error, {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+
+                })
             })
     }
     // user login with google
@@ -25,11 +47,22 @@ const Login = () => {
         loginWithGoogle()
             .then((res) => {
                 if (res?.user) {
+                    toast.success("Login sucessfully", {
+                        position: "top-center",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+
+                    })
                     navigate("/")
                 }
             })
             .catch(() => {
-                // console.log(err.code)
+
             })
     }
     return (

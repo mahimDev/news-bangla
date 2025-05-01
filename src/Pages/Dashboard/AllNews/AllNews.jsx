@@ -19,7 +19,7 @@ const AllNews = () => {
     const handleDeleteBtn = (id) => {
         setDeleteModal(true)
         setDeleteId(id)
-        console.log(id)
+
     }
     const confirmDelete = async () => {
         const { data } = await axiosSecure.delete(`/news/${deleteId}`)

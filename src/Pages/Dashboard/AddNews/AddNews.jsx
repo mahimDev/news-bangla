@@ -42,7 +42,7 @@ const AddNews = () => {
         if (file) {
             setProccess(true)
             // const res = await axios.post(`${apiURL}?key=${apiKey}`, file)
-            // console.log(res)
+
             const imageUrl = await uploadImgBB(file);
 
             setPreview(imageUrl);
@@ -53,7 +53,7 @@ const AddNews = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { title, content, imageUrl, author } = news
-        console.log(content)
+
         const { data } = await axiosSecure.post("addNews", news)
         if (data?.insertedId) {
             setNews({

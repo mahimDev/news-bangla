@@ -11,7 +11,7 @@ const NewsEditModal = (props = {}) => {
         author: item?.author,
         imageUrl: item?.imageUrl,
     });
-    // console.log(item?._id)
+
     const [preview, setPreview] = useState(null);
     const [proccess, setProccess] = useState(false)
     const axiosSecure = useAxiosSecure()
@@ -43,7 +43,7 @@ const NewsEditModal = (props = {}) => {
         if (file) {
             setProccess(true)
             // const res = await axios.post(`${apiURL}?key=${apiKey}`, file)
-            // console.log(res)
+
             const imageUrl = await uploadImgBB(file);
 
             setPreview(imageUrl);
@@ -54,7 +54,7 @@ const NewsEditModal = (props = {}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { title, content, imageUrl, author } = news
-        // console.log(news)
+
         const { data } = await axiosSecure.put(`/updateNews/${item?._id}`, news)
         if (data.modifiedCount) {
             refetch()
@@ -62,7 +62,7 @@ const NewsEditModal = (props = {}) => {
         }
 
     };
-    console.log(news)
+
     return (
         <div>
             <div className="backdrop-blur-lg fixed open: z-30 w-screen h-screen flex justify-center items-center bg-green-500/10 top-0 left-0">

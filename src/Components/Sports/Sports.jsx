@@ -22,7 +22,7 @@ const Sports = () => {
         }
         fatchData()
     }, [axiosnPublic])
-    // console.log(latest2nd3rdSportsNews)
+
     return (
         <div>
             <h1 className="text-5xl font-medium my-10 flex items-center">

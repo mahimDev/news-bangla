@@ -19,7 +19,7 @@ const International = () => {
         const fatchData = async () => {
             const { data } = await axiosnPublic.get("/latest2nd3rdInternationalNews")
             setLatest2nd3rdNews(data)
-            // console.log(data)
+
         }
         fatchData()
     }, [axiosnPublic])

@@ -3,6 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import useRole from "../../Hooks/useRole";
 import logo from '../../assets/logo.jpg';
+import { toast } from "react-toastify";
 const NavBer = () => {
     const [isOpen, setIsOpen] = useState(false)
     const date = new Date().toDateString()
@@ -11,10 +12,20 @@ const NavBer = () => {
     const handleLogoutBtn = () => {
         userLogout()
             .then(() => {
-                console.log("logout completed")
+                toast.success("Logout sucessfully", {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+
+                })
             })
-            .catch((err) => {
-                console.log(err)
+            .catch(() => {
+
             })
     }
 

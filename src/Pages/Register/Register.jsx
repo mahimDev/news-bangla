@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { toast } from "react-toastify";
 
 const Register = () => {
     const { createUser, user, loginWithGoogle } = useAuth()
@@ -15,6 +16,17 @@ const Register = () => {
         const password = form.get('password')
         createUser(email, password)
             .then(async (res) => {
+                toast.success("Registration completed sucessfully", {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+
+                })
                 const { data } = await axiosPublic.post("/users", { fullName, email, password })
                 if (data.insertedId) {
                     navigate("/")
@@ -22,7 +34,8 @@ const Register = () => {
 
             })
             .catch((err) => {
-                console.log(err)
+                const error = err?.code.split("-").join(" ").split("/").join(" ")
+                toast.error(error)
             })
     }
     // user login with google
@@ -33,15 +46,26 @@ const Register = () => {
                     const email = res?.user?.email
                     const fullName = res?.user?.displayName
                     const { data } = await axiosPublic.post("/users", { fullName, email })
+                    toast.success("Login sucessfully", {
+                        position: "top-center",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+
+                    })
                     navigate("/")
 
                 }
             })
-        // .catch(() => {
-        //     // console.log(err.code)
-        // })
+            .catch(() => {
+
+            })
     }
-    console.log(user)
+
     return (
         <div className="flex justify-center mt-10 p-10">
             <div className=" p-10 rounded shadow-2xl ">

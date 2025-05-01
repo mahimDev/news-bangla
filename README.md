@@ -92,14 +92,14 @@ The backend repository is located separately. Make sure it's running and accessi
 - `react-helmet` is used to inject meta tags dynamically
 - Open Graph meta tags are set on news detail pages for Facebook, Twitter, etc.
 
----
+<!-- ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.  
+This project is licensed under the **MIT License**.
 You are free to use, copy, and modify for learning or production.
 
----
+--- -->
 
 ## 👤 Author
 
