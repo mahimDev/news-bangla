@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from 'react-toastify';
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 const Login = () => {
     const { userLogin, loginWithGoogle } = useAuth()
+    const axiosPublic = useAxiosPublic()
     const navigate = useNavigate()
     // user login 
     const handleLoginBtn = (e) => {
@@ -45,8 +47,12 @@ const Login = () => {
     // user login with google
     const handleGoogleLoginBtn = () => {
         loginWithGoogle()
-            .then((res) => {
+            .then(async (res) => {
                 if (res?.user) {
+                    const email = res?.user?.email
+                    const fullName = res?.user?.displayName
+                    const { data } = await axiosPublic.post("/users", { fullName, email })
+                    console.log(data)
                     toast.success("Login sucessfully", {
                         position: "top-center",
                         autoClose: 3000,
@@ -59,6 +65,7 @@ const Login = () => {
 
                     })
                     navigate("/")
+
                 }
             })
             .catch(() => {
