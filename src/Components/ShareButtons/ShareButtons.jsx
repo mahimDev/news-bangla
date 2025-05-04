@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const ShareButtons = ({ newsId, title }) => {
-    const shareUrl = `https://nekrenews.net/share/${newsId}`; // ✅ এই লাইন ঠিক করে দিলাম
+    const shareUrl = `https://api.nekrenews.net/share/${newsId}`; // ✅ এই লাইন ঠিক করে দিলাম
     const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {

@@ -33,11 +33,11 @@ const router = createBrowserRouter([
                 element: <NewsDetails />,
                 loader: ({ params }) => fetch(`${import.meta.env.VITE_SEVER_API_URL}newsDetails/${params?.id}`)
             },
-            {
-                path: "share/:id",
-                element: <ShareRedirect />,
+            // {
+            //     path: "share/:id",
+            //     element: <ShareRedirect />,
 
-            },
+            // },
             {
                 path: "category/:category",
                 element: <CategoryNews />,
