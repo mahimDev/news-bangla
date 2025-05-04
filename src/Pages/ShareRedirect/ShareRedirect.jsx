@@ -9,5 +9,5 @@ export default function ShareRedirect() {
         navigate(`/news/${id}`);
     }, [id, navigate]);
 
-    return <p>Redirecting to full article...</p>;
+    return <p>loading...</p>;
 }

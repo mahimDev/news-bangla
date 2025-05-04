@@ -1,6 +1,7 @@
 
 import { useLoaderData } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import ShareButtons from "../../Components/ShareButtons/ShareButtons";
 
 const NewsDetails = () => {
     const news = useLoaderData()
@@ -12,7 +13,7 @@ const NewsDetails = () => {
         title,
         _id }
         = news
-
+    console.log(news)
     const cont = content?.split("\n")
 
     return (
@@ -20,12 +21,15 @@ const NewsDetails = () => {
             <Helmet >
                 <title>{title}</title>
                 <meta property="og:title" content={title} />
-                <meta property="og:description" content={content} />
+                <meta property="og:description" content={content?.slice(0, 160)} />
                 <meta property="og:image" content={imageUrl} />
                 <meta property="og:url" content={`https://nekrenews.net/news/${_id}`} />
                 <meta property="og:type" content="article" />
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
+            <div className="flex justify-center my-4">
+                <ShareButtons newsId={_id} title={title} />
+            </div>
             <div className="mx-auto max-w-[1000px]  p-10">
                 <img className=" mx-auto" src={imageUrl} alt="" />
                 <h1 className="text-4xl my-7 ">{title}</h1>
