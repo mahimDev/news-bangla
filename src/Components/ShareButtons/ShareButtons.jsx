@@ -2,12 +2,12 @@
 import { useState } from "react";
 
 const ShareButtons = ({ newsId, title }) => {
-    const shareUrl = `https://api.nekrenews.net/share/${newsId}`;
+    const shareUrl = `https://nekrenews.net/share/${newsId}`; // ✅ এই লাইন ঠিক করে দিলাম
     const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText(shareUrl);
+            await navigator.clipboard.writeText(shareUrl); // ✅ এখানেও আপডেট
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
@@ -54,13 +54,13 @@ const ShareButtons = ({ newsId, title }) => {
             >
                 Messenger
             </a>
-            <button
+            {/* <button
                 onClick={handleCopy}
                 className="flex items-center gap-2 px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800"
             >
 
                 {copied ? "কপি হয়েছে!" : "লিংক কপি করুন"}
-            </button>
+            </button> */}
         </div>
     );
 };
