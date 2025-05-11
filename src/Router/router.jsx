@@ -36,7 +36,6 @@ const router = createBrowserRouter([
             // {
             //     path: "share/:id",
             //     element: <ShareRedirect />,
-
             // },
             {
                 path: "category/:category",

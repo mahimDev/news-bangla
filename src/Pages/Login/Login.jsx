@@ -52,7 +52,7 @@ const Login = () => {
                     const email = res?.user?.email
                     const fullName = res?.user?.displayName
                     const { data } = await axiosPublic.post("/users", { fullName, email })
-                    console.log(data)
+
                     toast.success("Login sucessfully", {
                         position: "top-center",
                         autoClose: 3000,

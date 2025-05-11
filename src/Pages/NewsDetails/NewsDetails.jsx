@@ -13,7 +13,7 @@ const NewsDetails = () => {
         title,
         _id }
         = news
-    console.log(news)
+
     const cont = content?.split("\n")
 
     return (
@@ -26,6 +26,8 @@ const NewsDetails = () => {
                 <meta property="og:url" content={`https://nekrenews.net/news/${_id}`} />
                 <meta property="og:type" content="article" />
                 <meta name="twitter:card" content="summary_large_image" />
+                <link rel="canonical" href={`https://nekrenews.net/news/${_id}`} />
+
             </Helmet>
             <div className="flex justify-center my-4">
                 <ShareButtons newsId={_id} title={title} />
