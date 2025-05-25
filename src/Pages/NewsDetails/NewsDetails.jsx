@@ -20,13 +20,13 @@ const NewsDetails = () => {
         <div className="">
             <Helmet >
                 <title>{title}</title>
-                <meta property="og:title" content={title} />
+                {/* <meta property="og:title" content={title} />
                 <meta property="og:description" content={content?.slice(0, 160)} />
                 <meta property="og:image" content={imageUrl} />
                 <meta property="og:url" content={`https://nekrenews.net/news/${_id}`} />
                 <meta property="og:type" content="article" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <link rel="canonical" href={`https://nekrenews.net/news/${_id}`} />
+                <link rel="canonical" href={`https://nekrenews.net/news/${_id}`} /> */}
 
             </Helmet>
             <div className="flex justify-center my-4">
