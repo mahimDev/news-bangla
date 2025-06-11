@@ -3,7 +3,7 @@ import { useState } from "react";
 const ShareButtons = ({ newsId, title }) => {
     //   const shareUrl = `https://nekrenews.net/news/${newsId}`;
     //   const shareUrl = `https://news-bangla-server-test.vercel.app/share/${newsId}`;
-    const shareUrl = `${import.meta.env.VITE_SEVER_API_URL}/share/${newsId}`;
+    const shareUrl = `${import.meta.env.VITE_SEVER_API_URL}share/${newsId}`;
     console.log(shareUrl)
     //   const shareUrl = `http://localhost:4000/share/${newsId}`;
     //   const [copied, setCopied] = useState(false);
@@ -45,7 +45,7 @@ const ShareButtons = ({ newsId, title }) => {
             </a>
             <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-                    `${import.meta.env.VITE_SEVER_API_URL}/whatsappShare/${newsId}`
+                    `${import.meta.env.VITE_SEVER_API_URL}whatsappShare/${newsId}`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
