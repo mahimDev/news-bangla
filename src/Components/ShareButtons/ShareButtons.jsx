@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const ShareButtons = ({ newsId, title }) => {
     //   const shareUrl = `https://nekrenews.net/news/${newsId}`;
